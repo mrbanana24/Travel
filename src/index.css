@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Outfit:wght@100;300;400;500;600;700;800&display=swap');
+/* Importamos las fuentes */
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1, p, a, h4, h3 {
+  color: #fff;
+}
+
+/* Añadimos la fuente 'Outfit' */
+body {
+  margin: 0;
+  font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #000;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.btn {
+  padding: 12px 32px; /* Primer param: vertical. Segundo param: horizontal */
+  font-size: 1.2rem;
+  text-transform: uppercase; /*Pone las letras en mayusculas*/
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.btn-ligth {
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, .2);
+}

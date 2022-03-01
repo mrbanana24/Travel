@@ -1,0 +1,66 @@
+.header {
+  position: fixed; /* Permanece en el mismo lugar aunque hagamos scroll */
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  z-index: 10;
+}
+
+.header-bg{
+  background-color: rgba(0, 0, 0, .3);
+  transition: .3s;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu li {
+  padding: 0 1rem;
+}
+
+.nav-menu a { /* A los links */
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.hamburguer {
+  display: none; /* Escondemos */
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1240px) {
+  .hamburguer{
+    display: block;
+    cursor: pointer;
+  }
+  .nav-menu{
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: -100%; /* Hacemos que se vaya de la pantalla, para poder activare el menu con la hamburguesa */
+    text-align: center;
+    width: 100%;
+    height: 100vh; /* Lo lleva al medio de la pantalla */
+    transition: 0.3s;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, .9);
+  }
+
+  .nav-menu.active { /* Cuando hagamos clic, pasamos de -100% a 0, y mostramos el menu */
+    left: 0;
+  }
+
+  .nav-menu li {
+    padding: 1rem 0;
+  }
+
+  .nav-menu a {
+    font-size: 2rem;
+  }
+}
